@@ -2,13 +2,12 @@ import joins
 import table_samples
 
 
-query_parameters = {
-    "left": table_samples.cats, "right": table_samples.shops,
-    "condition": lambda cat, shop: cat.shop_id == shop.id,
-    "fields_filter": lambda cat, shop: (
-        (cat and cat.name), (shop and shop.name)
-    )
-}
+query_parameters = dict(
+    left=table_samples.cats,
+    right=table_samples.shops,
+    condition=lambda cat, shop: cat.shop_id == shop.id,
+    fields_filter=lambda cat, shop: ((cat and cat.name), (shop and shop.name))
+)
 
 
 def test_joins():
