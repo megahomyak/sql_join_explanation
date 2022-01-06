@@ -11,17 +11,17 @@ class Shop(NamedTuple):
     name: Optional[str]
 
 
-cats = {
+cats = [
     Cat(name="Vlas", shop_id=1),
     Cat("Nemo", 2),
     Cat("Vicont", 10),
     Cat("Zuza", None)
-}
+]
 
 
-shops = {
+shops = [
     Shop(id=1, name="Four Paws"),
     Shop(2, "Mr.Zoo"),
     Shop(3, "Murzila"),
     Shop(4, "Cats&Dogs")
-}
+]
